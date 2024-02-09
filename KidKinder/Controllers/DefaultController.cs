@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using KidKinder.Context;
+using KidKinder.Entities;
 
 namespace KidKinder.Controllers
 {
     public class DefaultController : Controller
     {
-        // GET: Default
+
+        KidKinderContext c = new KidKinderContext();
+        
         public ActionResult Index()
         {
             return View();
@@ -34,7 +39,8 @@ namespace KidKinder.Controllers
         }
         public PartialViewResult PartialAbout()
         {
-            return PartialView();
+            var degerler = c.AboutLists.ToList();
+            return PartialView(degerler);
         }
         public PartialViewResult PartialClassRooms()
         {
