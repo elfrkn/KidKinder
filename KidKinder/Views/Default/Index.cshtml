@@ -1,15 +1,16 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
 }
 
 <!DOCTYPE html>
 <html lang="en">
-@Html.Action("PartialHead","Default")
+
 
 <body>
     
-    @Html.Action("PartialNavbar","Default")
+   
    
     @Html.Action("PartialFeature","Default")
     
@@ -25,8 +26,5 @@
     
     @Html.Action("PartialTestimonial","Default")
     
-    @Html.Action("PartialFooter","Default")
-   
-   @Html.Action("PartialScript","Default")
 </body>
 </html>

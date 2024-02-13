@@ -31,20 +31,24 @@ namespace KidKinder.Controllers
 
         public PartialViewResult PartialFeature()
         {
-            return PartialView();
+            var values = c.Features.ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialService()
         {
-            return PartialView();
+            var values = c.Services.ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialAbout()
         {
-            var degerler = c.AboutLists.ToList();
+           
+           var degerler = c.Abouts.ToList();
             return PartialView(degerler);
         }
         public PartialViewResult PartialClassRooms()
         {
-            return PartialView();
+            var values = c.ClassRooms.ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialBookASeat()
         {
@@ -65,6 +69,13 @@ namespace KidKinder.Controllers
         public PartialViewResult PartialScript()
         {
             return PartialView();
+        }
+
+        public PartialViewResult PartialAboutList()
+        {
+
+            var degerler = c.AboutLists.ToList();
+            return PartialView(degerler);
         }
     }
 }
