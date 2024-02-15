@@ -77,5 +77,7 @@ namespace KidKinder.Controllers
             var degerler = c.AboutLists.ToList();
             return PartialView(degerler);
         }
+
+        
     }
 }

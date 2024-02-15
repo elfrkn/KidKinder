@@ -28,5 +28,21 @@ namespace KidKinder.Controllers
             ViewBag.email = c.Communications.Select(x => x.Email).FirstOrDefault();
             return PartialView();
         }
+
+        [HttpGet]
+        public PartialViewResult ContactMessage()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult ContactMessage(Contact p)
+        {
+            var value = c.Contacts.Add(p);
+            value.SendDate = DateTime.Now;
+            value.IsRead = false;
+            c.SaveChanges();
+            return PartialView(value);
+        }
     }
 }
