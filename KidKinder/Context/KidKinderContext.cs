@@ -24,6 +24,7 @@ namespace KidKinder.Context
         public DbSet<SocialMedia> SocialMedias { get; set; }
 
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
 
     }
 }
