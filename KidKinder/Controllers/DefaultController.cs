@@ -50,20 +50,51 @@ namespace KidKinder.Controllers
             var values = c.ClassRooms.ToList();
             return PartialView(values);
         }
+        [HttpGet]
+
         public PartialViewResult PartialBookASeat()
         {
+            //List<SelectListItem> values = (from x in c.ClassRooms.ToList()
+            //                               select new SelectListItem
+            //                               {
+            //                                   Text = x.Title,
+            //                                   Value = x.ClassRoomId.ToString()
+            //                               }).ToList();
+
+
+            //ViewBag.v = values;
             return PartialView();
         }
+        [HttpPost]
+        public PartialViewResult PartialBookASeat(BookASeat p)
+        {
+            c.BookASeats.Add(p);
+            c.SaveChanges();
+            return PartialView();
+
+           
+        }
+
         public PartialViewResult PartialTeacher()
         {
-            return PartialView();
+            var degerler = c.Teachers.ToList();
+            return PartialView(degerler);
         }
         public PartialViewResult PartialTestimonial()
         {
-            return PartialView();
+            var degerler = c.Testimonials.ToList();
+            return PartialView(degerler);
         }
+        [HttpGet]
         public PartialViewResult PartialFooter()
         {
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult PartialFooter(MailSubscribe p)
+        {
+            c.MailSubscribes.Add(p);
+            c.SaveChanges();
             return PartialView();
         }
         public PartialViewResult PartialScript()
@@ -77,7 +108,7 @@ namespace KidKinder.Controllers
             var degerler = c.AboutLists.ToList();
             return PartialView(degerler);
         }
-
+       
         
     }
 }

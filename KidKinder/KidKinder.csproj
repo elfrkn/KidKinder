@@ -154,6 +154,14 @@
     <Compile Include="Migrations\202402151124151_mig3.designer.cs">
       <DependentUpon>202402151124151_mig3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402162034243_mig_add_bookaseat.cs" />
+    <Compile Include="Migrations\202402162034243_mig_add_bookaseat.designer.cs">
+      <DependentUpon>202402162034243_mig_add_bookaseat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402162334247_mig_change_bookaseat.cs" />
+    <Compile Include="Migrations\202402162334247_mig_change_bookaseat.designer.cs">
+      <DependentUpon>202402162334247_mig_change_bookaseat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SendMessageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -680,6 +688,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402151124151_mig3.resx">
       <DependentUpon>202402151124151_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402162034243_mig_add_bookaseat.resx">
+      <DependentUpon>202402162034243_mig_add_bookaseat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402162334247_mig_change_bookaseat.resx">
+      <DependentUpon>202402162334247_mig_change_bookaseat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

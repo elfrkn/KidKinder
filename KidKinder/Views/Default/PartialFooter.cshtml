@@ -1,4 +1,5 @@
-﻿<div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+﻿@model KidKinder.Entities.MailSubscribe
+<div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
     <div class="row pt-5">
         <div class="col-lg-3 col-md-6 mb-5">
             <a href=""
@@ -60,26 +61,29 @@
         <div class="col-lg-3 col-md-6 mb-5">
             <h3 class="text-primary mb-4">Linkler</h3>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Ana Sayfa</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Hakkımda</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Eğitim Grupları</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Öğretmenler</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Galeri</a>
-                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>İletişim</a>
+                <a class="text-white mb-2" href="/Default/Index/"><i class="fa fa-angle-right mr-2"></i>Ana Sayfa</a>
+                <a class="text-white mb-2" href="/Default/#about"><i class="fa fa-angle-right mr-2"></i>Hakkımda</a>
+                <a class="text-white mb-2" href="/Default/#class"><i class="fa fa-angle-right mr-2"></i>Eğitim Grupları</a>
+                <a class="text-white mb-2" href="/Default/#teacher"><i class="fa fa-angle-right mr-2"></i>Öğretmenler</a>
+                <a class="text-white mb-2" href="/Gallery/Index"><i class="fa fa-angle-right mr-2"></i>Galeri</a>
+                <a class="text-white" href="/Contact/#iletisim"><i class="fa fa-angle-right mr-2"></i>İletişim</a>
             </div>
         </div>
+
         <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-primary mb-4">Üye Ol</h3>
-            <form action="">
+            <h3 class="text-primary mb-4">Abone Ol</h3>
+            <form method="post">
                 <div class="form-group">
                     <input type="text"
                            class="form-control border-0 py-4"
+                           name="NameSurname"
                            placeholder="İsminiz"
                            required="required" />
                 </div>
                 <div class="form-group">
                     <input type="email"
                            class="form-control border-0 py-4"
+                           name="Email"
                            placeholder="Email Adresiniz"
                            required="required" />
                 </div>
