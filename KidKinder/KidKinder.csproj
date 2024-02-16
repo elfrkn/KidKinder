@@ -123,6 +123,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\KidKinderContext.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
@@ -640,6 +641,8 @@
     <Content Include="Views\Teacher\TeacherList.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Contact\ContactMessage.cshtml" />
+    <Content Include="Views\Class\ClassList.cshtml" />
+    <Content Include="Views\Class\EditClass.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

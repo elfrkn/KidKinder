@@ -1,0 +1,75 @@
+﻿@model KidKinder.Entities.ClassRoom
+@{
+    ViewBag.Title = "EditClass";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+       <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                
+                                <div class="card-block">
+                                    <br />
+                                    <h3>Sınıf Güncelleme Sayfası</h3>
+                                        <form method="post">
+
+                                            @Html.HiddenFor(x => x.ClassRoomId, new { @class = "table table-bordered" })
+                                            <br />
+                                            <br />
+                                            <label><strong>Sınıf Adı</strong></label>
+                                            @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
+                                            <br />
+
+                                            <label>Açıklama</label>
+                                            @Html.TextBoxFor(x => x.Description, new { @class = "table table-bordered" })
+                                            <br />
+
+                                            <label>Yaş Aralığı</label>
+                                            @Html.TextBoxFor(x => x.AgeofKids, new { @class = "table table-bordered" })
+                                            <br />
+
+                                            <label>Kontenjan</label>
+                                            @Html.TextBoxFor(x => x.TotalSeats, new { @class = "table table-bordered" })
+                                            <br />
+
+                                            <label>Ders Saatleri</label>
+                                            @Html.TextBoxFor(x => x.ClassTime, new { @class = "table table-bordered" })
+                                            <br />
+
+                                            <label>Fiyat</label>
+                                            @Html.TextBoxFor(x => x.Price, new { @class = "table table-bordered" })
+                                            <br />
+
+                                            <label>Görsel Link</label>
+                                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table-bordered" })
+                                            <br />
+                                            <br />
+                                            <button class="btn btn-primary"> Güncelle</button>
+
+                                        </form>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

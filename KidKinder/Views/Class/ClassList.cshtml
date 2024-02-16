@@ -1,17 +1,20 @@
-﻿@model List<KidKinder.Entities.Teacher>
+﻿@model List<KidKinder.Entities.ClassRoom>
 @{
-    ViewBag.Title = "TeacherList";
+    ViewBag.Title = "ClassList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <body>
+
+    <!-- Basic table card start -->
     <div class="card">
         <div class="card-header">
             <br />
-            <h2>Öğretmen Listesi</h2>
+            <h2>Sınıf Listesi</h2>
 
             <div class="card-header-right">
 
@@ -23,8 +26,10 @@
                     <thead>
                         <tr bgcolor="#F2F3F4">
                             <th scope="col">#</th>
-                            <th scope="col">Öğretmen Adı</th>
-                            <th>Branş</th>
+                            <th>Sınıf Adı</th>
+                            <th>Yaş Aralığı</th>
+                            <th>Kontenjan</th>
+                            <th>Fiyat</th>
                             <th>Sil</th>
                             <th>Güncelle</th>
                         </tr>
@@ -32,15 +37,18 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
+
                             <tr>
-                                <td scope="col">@item.TeacherId</td>
-                                <td>@item.NameSurname</td>
+                                <th scope="row">@item.ClassRoomId</th>
                                 <td>@item.Title</td>
-                                <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
-                                <td><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+                                <td>@item.AgeofKids</td>
+                                <td>@item.TotalSeats</td>
+                                <td>@item.Price</td>
+                                <td><a href="#" class="btn btn-danger">Sil</a></td>
+                                <td><a href="/Class/EditClass/@item.ClassRoomId" class="btn btn-success">Güncelle</a></td>
                             </tr>
+
                         }
-           
                     </tbody>
 
                 </table>
@@ -50,7 +58,11 @@
         </div>
 
     </div>
-    <span>  <a href="#" class="btn btn-primary">Yeni Öğretmen Girişi </a> </span>
+
+    <span>  <a href="#" class="btn btn-primary">Yeni Sınıf Girişi </a> </span>
 </body>
 
 </html>
+
+
+
