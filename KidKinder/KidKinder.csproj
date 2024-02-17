@@ -146,21 +146,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202402131211561_mig2.cs" />
-    <Compile Include="Migrations\202402131211561_mig2.designer.cs">
-      <DependentUpon>202402131211561_mig2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202402151124151_mig3.cs" />
-    <Compile Include="Migrations\202402151124151_mig3.designer.cs">
-      <DependentUpon>202402151124151_mig3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202402162034243_mig_add_bookaseat.cs" />
-    <Compile Include="Migrations\202402162034243_mig_add_bookaseat.designer.cs">
-      <DependentUpon>202402162034243_mig_add_bookaseat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202402162334247_mig_change_bookaseat.cs" />
-    <Compile Include="Migrations\202402162334247_mig_change_bookaseat.designer.cs">
-      <DependentUpon>202402162334247_mig_change_bookaseat.cs</DependentUpon>
+    <Compile Include="Migrations\202402171442501__news.cs" />
+    <Compile Include="Migrations\202402171442501__news.designer.cs">
+      <DependentUpon>202402171442501__news.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SendMessageViewModel.cs" />
@@ -683,17 +671,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202402131211561_mig2.resx">
-      <DependentUpon>202402131211561_mig2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202402151124151_mig3.resx">
-      <DependentUpon>202402151124151_mig3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202402162034243_mig_add_bookaseat.resx">
-      <DependentUpon>202402162034243_mig_add_bookaseat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202402162334247_mig_change_bookaseat.resx">
-      <DependentUpon>202402162334247_mig_change_bookaseat.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202402171442501__news.resx">
+      <DependentUpon>202402171442501__news.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

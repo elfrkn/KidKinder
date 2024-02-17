@@ -51,20 +51,15 @@ namespace KidKinder.Controllers
             return PartialView(values);
         }
         [HttpGet]
-
         public PartialViewResult PartialBookASeat()
         {
-            //List<SelectListItem> values = (from x in c.ClassRooms.ToList()
-            //                               select new SelectListItem
-            //                               {
-            //                                   Text = x.Title,
-            //                                   Value = x.ClassRoomId.ToString()
-            //                               }).ToList();
 
 
-            //ViewBag.v = values;
+            ViewBag.ClassRoom = new SelectList(c.ClassRooms.ToList(), "ClassRoomId", "Title");
+
             return PartialView();
         }
+
         [HttpPost]
         public PartialViewResult PartialBookASeat(BookASeat p)
         {

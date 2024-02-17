@@ -7,13 +7,13 @@ namespace KidKinder.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class mig_change_bookaseat : IMigrationMetadata
+    public sealed partial class _changes : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(mig_change_bookaseat));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_changes));
         
         string IMigrationMetadata.Id
         {
-            get { return "202402162334247_mig_change_bookaseat"; }
+            get { return "202402171430254__changes"; }
         }
         
         string IMigrationMetadata.Source

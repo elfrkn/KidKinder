@@ -47,13 +47,7 @@
                             </div>
 
                             <div class="form-group">
-                                <select class="custom-select border-0 px-4"
-                                        style="height: 47px">
-                                    <option selected>Sınıf Seçiniz</option>
-
-                                    @*<option value=@Html.DropDownListFor(x=>x.ClassCategory,(List<SelectListItem>)ViewBag.v)</option>*@
-                                    
-                                </select>
+                                @Html.DropDownListFor(x => x.ClassCategory, (SelectList)ViewBag.ClassRoom, "Sınıf Seçiniz", new { @class = "form-control" })
                             </div>
                             <div>
                                 <button class="btn btn-secondary btn-block border-0 py-3"
@@ -65,10 +59,10 @@
 
                     </div>
 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 @*@Html.DropDownListFor(x => x.ClassCategory, (List<SelectListItem>)ViewBag.v, new { @class = "table table-bordered" })*@

@@ -26,5 +26,7 @@ namespace KidKinder.Context
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Notification> Notifications { get; set; }
 
+        
+
     }
 }

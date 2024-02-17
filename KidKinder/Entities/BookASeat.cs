@@ -12,5 +12,7 @@ namespace KidKinder.Entities
         public string Email  { get; set; }
 
         public int ClassCategory { get; set; }
+
+       
     }
 }
