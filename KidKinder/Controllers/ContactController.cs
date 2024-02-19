@@ -36,13 +36,13 @@ namespace KidKinder.Controllers
         }
 
         [HttpPost]
-        public PartialViewResult ContactMessage(Contact p)
+        public ActionResult ContactMessage(Contact p)
         {
             var value = c.Contacts.Add(p);
             value.SendDate = DateTime.Now;
             value.IsRead = false;
             c.SaveChanges();
-            return PartialView(value);
+            return RedirectToAction("Index","Default");
         }
     }
 }

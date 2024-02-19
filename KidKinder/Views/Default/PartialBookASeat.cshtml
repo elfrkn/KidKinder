@@ -1,5 +1,9 @@
 ﻿@model KidKinder.Entities.BookASeat
 
+@*@if (ViewBag.v == null)
+    {
+        this.Response.Redirect("Index");
+    }*@
 <div class="container-fluid py-5">
     <div class="container">
         <div class="row align-items-center">
@@ -30,7 +34,8 @@
                         <h1 class="text-white m-0">Yer Ayırın</h1>
                     </div>
                     <div class="card-body rounded-bottom bg-primary p-5">
-                        <form method="post">
+                        
+                        <form method="post" action="/Default/BookASeat">
                             <div class="form-group">
                                 <input type="text"
                                        class="form-control border-0 p-4"
@@ -47,22 +52,34 @@
                             </div>
 
                             <div class="form-group">
-                                @Html.DropDownListFor(x => x.ClassCategory, (SelectList)ViewBag.ClassRoom, "Sınıf Seçiniz", new { @class = "form-control" })
+
+                                @Html.DropDownListFor(x => x.ClassRoomId, (List<SelectListItem>)ViewBag.v, "Sınıf Seçiniz", new { @class = "table table-bordered" })
                             </div>
                             <div>
                                 <button class="btn btn-secondary btn-block border-0 py-3"
-                                        type="submit">
+                                        type="submit"
+                                        name="btnBook"
+                                        value="Buton B">
+
                                     Eğitimi Kaydet
                                 </button>
                             </div>
                         </form>
 
                     </div>
-
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 @*@Html.DropDownListFor(x => x.ClassCategory, (List<SelectListItem>)ViewBag.v, new { @class = "table table-bordered" })*@
+@*<div class="form-group">
+        <select class="custom-select border-0 px-4"
+                style="height: 47px">
+            <option selected>Sınıf Seçin</option>
+            <option value="">Yaratıcı Drama</option>
+            <option value="">Dil Öğrenimi</option>
+            <option value="">Bale Ve Modern Dans</option>
+        </select>
+    </div>*@

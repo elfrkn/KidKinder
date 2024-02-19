@@ -1,6 +1,6 @@
 ﻿@model KidKinder.Entities.ClassRoom
 @{
-    ViewBag.Title = "EditClass";
+    ViewBag.Title = "AddClass";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
@@ -21,8 +21,6 @@
                                     <h3>Sınıf Güncelleme Sayfası</h3>
                                     <form method="post">
 
-                                        @Html.HiddenFor(x => x.ClassRoomId, new { @class = "table table-bordered" })
-                                        <br />
                                         <br />
                                         <label><strong>Sınıf Adı</strong></label>
                                         @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
@@ -52,7 +50,7 @@
                                         @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table-bordered" })
                                         <br />
                                         <br />
-                                        <button class="btn btn-primary"> Güncelle</button>
+                                        <button class="btn btn-primary"> Kaydet</button>
 
                                     </form>
 
@@ -68,4 +66,5 @@
 </body>
 
 </html>
+
 
