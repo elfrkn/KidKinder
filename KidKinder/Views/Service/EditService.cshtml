@@ -1,0 +1,51 @@
+﻿@model KidKinder.Entities.Service
+@{
+    ViewBag.Title = "EditService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+
+                                <div class="card-block">
+                                    <br />
+                                    <h3>Hizmet Güncelleme Sayfası</h3>
+                                    <form method="post">
+
+                                        @Html.HiddenFor(x => x.ServiceId, new { @class = "table table-bordered" })
+                                        <br />
+                                        <br />
+                                        <label><strong>Başlık</strong></label>
+                                        @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
+                                        <br />
+
+                                        <label>İçerik</label>
+                                        @Html.TextBoxFor(x => x.Description, new { @class = "table table-bordered" })
+                                        <br />
+
+                                        <label>İkon Url</label>
+                                        @Html.TextBoxFor(x => x.IconUrl, new { @class = "table table-bordered" })
+                                       
+                                        <button class="btn btn-primary"> Güncelle</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

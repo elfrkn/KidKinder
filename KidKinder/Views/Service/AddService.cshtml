@@ -1,0 +1,54 @@
+﻿@model KidKinder.Entities.Service
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+
+                                <div class="card-block">
+                                    <br />
+                                    <h3>Yeni Hizmet Bilgilerini Giriniz</h3>
+                                    <form method="post">
+
+                                        <br />
+                                        <label><strong>Başlık</strong></label>
+                                        @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
+                                        <br />
+
+                                        <label>İçerik</label>
+                                        @Html.TextBoxFor(x => x.Description, new { @class = "table table-bordered" })
+                                        <br />
+
+                                        <label>İkon Url</label>
+                                        @Html.TextBoxFor(x => x.IconUrl, new { @class = "table table-bordered" })
+                                        <br />
+
+                                        <button class="btn btn-primary"> Kaydet</button>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
