@@ -20,8 +20,11 @@
             <div class="pcoded-main-container">
                 <div class="pcoded-wrapper">
                     @Html.Action("PartialSidebar", "AdminLayout")
+
                     <div class="pcoded-content">
-                       
+
+                       @Html.Action("PartialHeader","AdminLayout")
+
                       @RenderBody()
 
                     </div>

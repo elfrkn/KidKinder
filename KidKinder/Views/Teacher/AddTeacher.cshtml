@@ -4,51 +4,68 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
-    <div class="pcoded-inner-content">
-        <div class="main-body">
-            <div class="page-wrapper">
-                <div class="page-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card">
+<!-- Page-header start -->
+<!-- Page-header end -->
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
 
-                                <div class="card-block">
-                                    <br />
-                                    <h3>Yeni Öğretmen Bilgilerini Giriniz</h3>
-                                    <form method="post">
+            <!-- Page body start -->
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-md-6">
 
-                                        <br />
-                                        <label><strong>Adı Soyadı</strong></label>
-                                        @Html.TextBoxFor(x => x.NameSurname, new { @class = "table table-bordered" })
-                                        <br />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
 
-                                        <label>Branş</label>
-                                        @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
-                                        <br />
 
-                                        <label>Resim Url</label>
-                                        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table-bordered" })
-                                        <br />
+                        </div>
+                    </div>
+                </div>
 
-                                        <br />
-                                        <button class="btn btn-primary"> Kaydet</button>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Basic Form Inputs card start -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Basic Form Inputs</h5>
+                                <span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>
+                            </div>
+                            <div class="card-block">
+                                <h4 class="sub-title">Basic Inputs</h4>
+                                <form>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Simple Input</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
 
-                                    </form>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Upload File</label>
+                                        <div class="col-sm-10">
+                                            <input type="file" class="form-control">
+                                        </div>
+                                    </div>
 
-                                </div>
+                                </form>
                             </div>
                         </div>
-
+                        <!-- Basic Form Inputs card end -->
                     </div>
                 </div>
             </div>
+            <!-- Page body end -->
         </div>
     </div>
-</body>
+    <!-- Main-body end -->
+    <div id="styleSelector">
 
-</html>
+    </div>
+</div>
+
+
 
