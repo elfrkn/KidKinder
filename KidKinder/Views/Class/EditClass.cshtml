@@ -4,68 +4,85 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<!DOCTYPE html>
-<html lang="en">
+<div class="pcoded-inner-content">
 
-<body>
-    <div class="pcoded-inner-content">
-        <div class="main-body">
-            <div class="page-wrapper">
-                <div class="page-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card">
-
-                                <div class="card-block">
-                                    <br />
-                                    <h3>Sınıf Güncelleme Sayfası</h3>
-                                    <form method="post">
-
-                                        @Html.HiddenFor(x => x.ClassRoomId, new { @class = "table table-bordered" })
-                                        <br />
-                                        <br />
-                                        <label><strong>Sınıf Adı</strong></label>
-                                        @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
-                                        <br />
-
-                                        <label>Açıklama</label>
-                                        @Html.TextBoxFor(x => x.Description, new { @class = "table table-bordered" })
-                                        <br />
-
-                                        <label>Yaş Aralığı</label>
-                                        @Html.TextBoxFor(x => x.AgeofKids, new { @class = "table table-bordered" })
-                                        <br />
-
-                                        <label>Kontenjan</label>
-                                        @Html.TextBoxFor(x => x.TotalSeats, new { @class = "table table-bordered" })
-                                        <br />
-
-                                        <label>Ders Saatleri</label>
-                                        @Html.TextBoxFor(x => x.ClassTime, new { @class = "table table-bordered" })
-                                        <br />
-
-                                        <label>Fiyat</label>
-                                        @Html.TextBoxFor(x => x.Price, new { @class = "table table-bordered" })
-                                        <br />
-
-                                        <label>Görsel Link</label>
-                                        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table-bordered" })
-                                        <br />
-                                        <br />
-                                        <button class="btn btn-primary"> Güncelle</button>
-
-                                    </form>
-
-                                </div>
+    <div class="main-body">
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Basic Form Inputs card start -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Sınıf Güncelleme Sayfası</h5>
+                                <span>Sınıf ile ilgili verileri eksiksiz olarak doldurunuz.</span>
+                            </div>
+                            <div class="card-block">
+                                <form method="post">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Sınıf Id</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.ClassRoomId, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Sınıf Adı</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Açıklama</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Yaş Aralığı</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.AgeofKids, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Kontenjan</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.TotalSeats, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Ders Saatleri</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.ClassTime, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Fiyat</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Görsel Link</label>
+                                        <div class="col-sm-10">
+                                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary">Sınıfı Güncelle</button>
+                                </form>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
-
-</html>
+</div>
 

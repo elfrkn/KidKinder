@@ -2,12 +2,14 @@
 using KidKinder.Entities;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 namespace KidKinder.Controllers
 {
+    [Authorize]
     public class TeacherController : Controller
     {
         KidKinderContext c = new KidKinderContext();
@@ -20,6 +22,14 @@ namespace KidKinder.Controllers
         [HttpGet]
         public ActionResult AddTeacher()
         {
+            List<SelectListItem> values = (from x in c.Branches.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.BranchName,
+                                               Value = x.BranchId.ToString()
+
+                                           }).ToList();
+            ViewBag.v = values;
             return View();
         }
         [HttpPost]
@@ -41,14 +51,22 @@ namespace KidKinder.Controllers
         [HttpGet]
         public ActionResult EditTeacher(int id)
         {
-            var values = c.Teachers.Find(id);
-            return View(values);
+            List<SelectListItem> values = (from x in c.Branches.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.BranchName,
+                                               Value = x.BranchId.ToString()
+
+                                           }).ToList();
+            ViewBag.v = values;
+            var value = c.Teachers.Find(id);
+            return View(value);
         }
         [HttpPost]
         public ActionResult EditTeacher(Teacher p)
         {
             var value = c.Teachers.Find(p.TeacherId);
-            value.Title = p.Title;
+            value.BranchId = p.BranchId;
             value.NameSurname = p.NameSurname;
             value.ImageUrl = p.ImageUrl;
             c.SaveChanges();
