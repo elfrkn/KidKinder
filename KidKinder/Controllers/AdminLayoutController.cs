@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace KidKinder.Controllers
 {
+   
     public class AdminLayoutController : Controller
     {
         KidKinderContext context = new KidKinderContext();

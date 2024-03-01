@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace KidKinder.Controllers
 {
-    [Authorize]
+    
     public class TeacherController : Controller
     {
         KidKinderContext c = new KidKinderContext();
@@ -48,6 +48,7 @@ namespace KidKinder.Controllers
 
 
         }
+
         [HttpGet]
         public ActionResult EditTeacher(int id)
         {

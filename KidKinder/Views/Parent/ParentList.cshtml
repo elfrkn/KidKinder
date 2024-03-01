@@ -1,0 +1,75 @@
+﻿@model List<KidKinder.Entities.Parent>
+@{
+    ViewBag.Title = "ParentList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<!-- waves.css -->
+<link rel="stylesheet" href="~/Templates/material_able-main/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+<!-- Favicon icon -->
+<link rel="icon" href="~/Templates/material_able-main/assets/images/favicon.ico" type="image/x-icon">
+<!-- themify-icons line icon -->
+<link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/icon/themify-icons/themify-icons.css">
+<!-- waves.css -->
+<link rel="stylesheet" href="~/Templates/material_able-main/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+
+
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Veli Listesi Tablosu</h5>
+                        <span>Veliler ile ilgili işlemleri yapabileceğiniz alandır.</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Ad Soyad</th>
+                                        <th>Telefon</th>
+                                        <th>Öğrencisi</th>
+                                        <th>Sil</th>
+                                        <th>Güncelle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.ParentId</td>
+                                            <td>@item.ParentNameSurname</td>
+                                            <td>@item.Phone</td>
+                                            <td>@item.Student.StudentNameSurname</td>
+                                            <td><a href="/Parent/DeleteParent/@item.ParentId" class="btn btn-danger">Sil</a></td>
+                                            <td><a href="/Parent/EditParent/@item.ParentId" class="btn btn-success">Güncelle</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/Parent/AddParent/" class="btn btn-primary">Yeni Veli Girişi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -22,10 +22,11 @@ namespace KidKinder.Controllers
 
         public PartialViewResult ContactAddressPartial()
         {
-            ViewBag.description = c.Communications.Select(x => x.Description).FirstOrDefault();
-            ViewBag.phone = c.Communications.Select(x => x.Phone).FirstOrDefault();
-            ViewBag.address = c.Communications.Select(x => x.Address).FirstOrDefault();
-            ViewBag.email = c.Communications.Select(x => x.Email).FirstOrDefault();
+            ViewBag.description = c.Addresses.Select(x => x.Description).FirstOrDefault();
+            ViewBag.phone = c.Addresses.Select(x => x.Phone).FirstOrDefault();
+            ViewBag.address = c.Addresses.Select(x => x.AddressDetail).FirstOrDefault();
+            ViewBag.email = c.Addresses.Select(x => x.Email).FirstOrDefault();
+            ViewBag.hours = c.Addresses.Select(x => x.OpeningHours).FirstOrDefault();
             return PartialView();
         }
 

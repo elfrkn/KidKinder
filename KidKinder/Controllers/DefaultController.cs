@@ -11,7 +11,7 @@ using Microsoft.Ajax.Utilities;
 
 namespace KidKinder.Controllers
 {
-
+  
     public class DefaultController : Controller
     {
 
@@ -50,7 +50,7 @@ namespace KidKinder.Controllers
         }
         public PartialViewResult PartialClassRooms()
         {
-            var values = c.ClassRooms.Take(3).ToList();
+            var values = c.ClassRooms.Take(3).OrderByDescending(x => x.ClassRoomId).ToList();
             return PartialView(values);
         }
 
@@ -101,6 +101,10 @@ namespace KidKinder.Controllers
         [HttpGet]
         public PartialViewResult PartialFooter()
         {
+            ViewBag.description = c.Communications.Select(x => x.Description).FirstOrDefault();
+            ViewBag.address = c.Communications.Select(x => x.Address).FirstOrDefault();
+            ViewBag.email = c.Communications.Select(x => x.Email).FirstOrDefault();
+            ViewBag.phone = c.Communications.Select(x => x.Phone).FirstOrDefault();
             return PartialView();
         }
         [HttpPost]
@@ -122,6 +126,12 @@ namespace KidKinder.Controllers
 
             var degerler = c.AboutLists.ToList();
             return PartialView(degerler);
+        }
+
+        public ActionResult ClassRoomAllList()
+        {
+            var values = c.ClassRooms.ToList();
+            return View(values);
         }
 
 

@@ -4,64 +4,68 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Include Bootstrap CSS -->
+<!-- waves.css -->
+<link rel="stylesheet" href="~/Templates/material_able-main/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+<!-- Favicon icon -->
+<link rel="icon" href="~/Templates/material_able-main/assets/images/favicon.ico" type="image/x-icon">
+<!-- themify-icons line icon -->
+<link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/icon/themify-icons/themify-icons.css">
+<!-- waves.css -->
+<link rel="stylesheet" href="~/Templates/material_able-main/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-    <!-- Include Font Awesome CSS -->
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-</head>
-<body>
-    <div class="card">
-        <div class="card-header">
-            <br />
-            <h2>Hizmetler Listesi</h2>
-
-            <div class="card-header-right">
-
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Hizmetler Listesi Tablosu</h5>
+                        <span>Hizmetler ile ilgili işlemleri yapabileceğiniz alandır.</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Başlık</th>
+                                        <th>İçerik</th>
+                                        <th>Sil</th>
+                                        <th>Güncelle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.ServiceId</td>
+                                            <td>@item.Title</td>
+                                            <td>@item.Description</td>
+                                            <td><a href="/Service/DeleteService/@item.ServiceId" class="btn btn-danger">Sil</a></td>
+                                            <td><a href="/Service/EditService/@item.ServiceId" class="btn btn-success">Güncelle</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/Service/AddService/" class="btn btn-primary">Yeni Hizmet Girişi</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card-block table-border-style">
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr bgcolor="#F2F3F4">
-                            <th scope="col">#</th>
-                            <th scope="col">Başlık</th>
-                            <th>İçerik</th>
-                            <th>Sil</th>
-                            <th>Güncelle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td scope="col">@item.ServiceId</td>
-                                <td>@item.Title</td>
-                                <td>@item.Description</td>
-                                <td><a href="/Service/DeleteService/@item.ServiceId" class="btn btn-labeled btn-danger"><i class="fa fa-trash"></i>Sil</a></td>
-                                <td><a href="/Service/EditService/@item.ServiceId" class="btn btn-primary"><i class="fas fa-edit"></i>Güncelle</a></td>
-
-                            </tr>
-                        }
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
         </div>
     </div>
-    <a href="/Service/AddService/" class="btn btn-success"><i class="fas fa-save"></i>Yeni Hizmet Girişi </a>
-</body>
-
-
-
-</html>
+</div>
 
