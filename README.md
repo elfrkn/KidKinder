@@ -36,8 +36,9 @@ KidKinder bir Anaokul projesidir.Okul ile ilgili tüm detaylara ulaşabilir,yoru
 
 # KidKinder Genel Görünüm
 
+![Ekran görüntüsü 2024-03-01 135124](https://github.com/elfrkn/KidKinder/assets/101409313/041563ee-224e-4e24-9207-a425e5ca4adc)
 ![Ekran görüntüsü 2024-03-01 135453](https://github.com/elfrkn/KidKinder/assets/101409313/aa19fa34-6021-49be-8681-769a0e94c859)
 ![Ekran görüntüsü 2024-03-01 135434](https://github.com/elfrkn/KidKinder/assets/101409313/8a4dbb83-a67d-4c47-a0c3-b1c8ff357d44)
 ![Ekran görüntüsü 2024-03-01 135209](https://github.com/elfrkn/KidKinder/assets/101409313/daf5dd92-7c03-4fe7-bd0a-c86f94dfffa6)
-![Ekran görüntüsü 2024-03-01 135124](https://github.com/elfrkn/KidKinder/assets/101409313/041563ee-224e-4e24-9207-a425e5ca4adc)
+
 
